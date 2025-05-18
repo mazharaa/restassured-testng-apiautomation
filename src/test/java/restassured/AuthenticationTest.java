@@ -56,4 +56,28 @@ public class AuthenticationTest extends BaseTest{
 
         System.out.println(actRes.prettyPrint());
     }
+
+    @Test
+    public void loginTest() {
+        // Mapping the request body
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("email", EMAIL);
+        requestBody.put("password", PASSWORD);
+
+        System.out.println("loginTest starting...");
+
+        Response actRes = RestAssured
+            .given()
+            .contentType("application/json")
+            .body(requestBody)
+            .log().all()
+            .when()
+            .post("api/login");
+
+        token = actRes.jsonPath().getString("token");
+
+        Assert.assertNotNull(token, "Token should not be null");
+
+        System.out.println(actRes.prettyPrint());
+    }
 }
