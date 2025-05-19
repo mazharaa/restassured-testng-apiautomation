@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,7 +118,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="restassured.ObjectTest" class="method navigator-link" hash-for-method="listOfObjectsById">listOfObjectsById</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="restassured.ObjectTest" class="method navigator-link" hash-for-method="getSingleObjectTest">getSingleObjectTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="restassured.ObjectTest" class="method navigator-link" hash-for-method="listOfObjectsByIdTest">listOfObjectsByIdTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -162,9 +167,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="listOfObjectsById">
-                  </a> <!-- listOfObjectsById -->
-                  <span class="method-name">listOfObjectsById</span>
+                  <a name="getSingleObjectTest">
+                  </a> <!-- getSingleObjectTest -->
+                  <span class="method-name">getSingleObjectTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="listOfObjectsByIdTest">
+                  </a> <!-- listOfObjectsByIdTest -->
+                  <span class="method-name">listOfObjectsByIdTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,28 +234,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getListAllObjectTest')
 data.setCell(0, 2, 'restassured.ObjectTest')
-data.setCell(0, 3, 800);
+data.setCell(0, 3, 776);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteObjectTest')
+data.setCell(1, 1, 'getSingleObjectTest')
 data.setCell(1, 2, 'restassured.ObjectTest')
-data.setCell(1, 3, 731);
+data.setCell(1, 3, 723);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'addObjectTest')
 data.setCell(2, 2, 'restassured.ObjectTest')
-data.setCell(2, 3, 671);
+data.setCell(2, 3, 647);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'listOfObjectsById')
+data.setCell(3, 1, 'listOfObjectsByIdTest')
 data.setCell(3, 2, 'restassured.ObjectTest')
-data.setCell(3, 3, 637);
+data.setCell(3, 3, 628);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'deleteObjectTest')
+data.setCell(4, 2, 'restassured.ObjectTest')
+data.setCell(4, 3, 499);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -293,26 +309,30 @@ return data;
               <div class="chronological-class-name">restassured.AuthenticationTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">160 ms</span>
+                <span class="method-start">154 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">restassured.ObjectTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">addObjectTest</span>
-                <span class="method-start">1775 ms</span>
+                <span class="method-start">1731 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getListAllObjectTest</span>
-                <span class="method-start">2450 ms</span>
+                <span class="method-start">2381 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">listOfObjectsById</span>
-                <span class="method-start">3251 ms</span>
+                <span class="method-name">listOfObjectsByIdTest</span>
+                <span class="method-start">3157 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getSingleObjectTest</span>
+                <span class="method-start">3786 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteObjectTest</span>
-                <span class="method-start">3890 ms</span>
+                <span class="method-start">4510 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

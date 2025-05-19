@@ -51,9 +51,10 @@ public class ObjectTest extends BaseTest{
         List<Map<String, Object>> responseList = actRes.jsonPath().getList("");
         Map<String, Object> firstObject = responseList.get(0);
 
-        objectId = (int) firstObject.get("id");
-        String name = String.valueOf(firstObject.get("name"));
+        int id = (int) firstObject.get("id");
+        objectId = id;
 
+        String name = String.valueOf(firstObject.get("name"));
         
         Map<String, Object> data = (Map<String, Object>) firstObject.get("data");
         String year = String.valueOf(data.get("year"));
@@ -65,7 +66,7 @@ public class ObjectTest extends BaseTest{
         String color = String.valueOf(data.get("color"));
 
         Assert.assertEquals(actRes.statusCode(), 200);
-        Assert.assertNotNull(objectId, "ID should not be null");
+        Assert.assertNotNull(id, "ID should not be null");
         Assert.assertEquals(name, NAME);
         Assert.assertEquals(year, String.valueOf(YEAR));
         Assert.assertEquals(price, PRICE);
@@ -112,9 +113,8 @@ public class ObjectTest extends BaseTest{
         List<Map<String, Object>> responseList = actRes.jsonPath().getList("");
         Map<String, Object> firstObject = responseList.get(0);
 
-        objectId = (int) firstObject.get("id");
+        int id = (int) firstObject.get("id");
         String name = String.valueOf(firstObject.get("name"));
-
         
         Map<String, Object> data = (Map<String, Object>) firstObject.get("data");
         String year = String.valueOf(data.get("year"));
@@ -129,7 +129,7 @@ public class ObjectTest extends BaseTest{
         String color = String.valueOf(data.get("color"));
 
         Assert.assertEquals(actRes.statusCode(), 200);
-        Assert.assertNotNull(objectId, "ID should not be null");
+        Assert.assertNotNull(id, "ID should not be null");
         Assert.assertEquals(name, NAME);
         Assert.assertEquals(year, String.valueOf(YEAR));
         Assert.assertEquals(price, String.valueOf(PRICE));
@@ -141,6 +141,46 @@ public class ObjectTest extends BaseTest{
     }
 
     @Test(priority = 4)
+    public void getSingleObjectTest() {
+        // Get List of object by ID request
+        Response actRes = RestAssured
+            .given()
+            .contentType("application/json")
+            .header("Authorization", "Bearer " + token)
+            .log().all()
+            .when()
+            .get("8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/" + objectId);
+
+        System.out.println(actRes.prettyPrint());
+
+        int id = actRes.jsonPath().getInt("id");
+        String name = String.valueOf(actRes.jsonPath().getString("name"));
+
+        Map<String, Object> data = actRes.jsonPath().getMap("data");
+        String year = String.valueOf(data.get("year"));
+        // Price type data is different from addObject response body(?)
+        String price = String.valueOf(data.get("price"));
+        String cpuModel = String.valueOf(data.get("cpu_model"));
+        String hardDiskSize = String.valueOf(data.get("hard_disk_size"));
+        // Capacity type data is different from addObject response body(?)
+        int capacity = (int) data.get("capacity");
+        // Screen size type data is different from addObject response body(?)
+        int screenSize = (int) data.get("screen_size");
+        String color = String.valueOf(data.get("color"));
+
+        Assert.assertEquals(actRes.statusCode(), 200);
+        Assert.assertNotNull(id, "ID should not be null");
+        Assert.assertEquals(name, NAME);
+        Assert.assertEquals(year, String.valueOf(YEAR));
+        Assert.assertEquals(price, String.valueOf(PRICE));
+        Assert.assertEquals(cpuModel, CPU_MODEL);
+        Assert.assertEquals(hardDiskSize, HARD_DISK_SIZE);
+        Assert.assertEquals(capacity, Integer.parseInt(CAPACITY.replaceAll("[^0-9]", "").trim()));
+        Assert.assertEquals(screenSize, Integer.parseInt(SCREEN_SIZE.replaceAll("[^0-9]", "").trim()));
+        Assert.assertEquals(color, COLOR);
+    }
+
+    @Test(priority = 5)
     public void deleteObjectTest() {
         // Delete object request
         Response actRes = RestAssured
