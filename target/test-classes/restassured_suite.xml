@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="REST Assured Test Suite">
+<suite name="REST Assured API Testing Suite" preserve-order="true" parallel="false">
     <test name="API Tests">
         <classes>
             <class name="restassured.AuthenticationTest"/>

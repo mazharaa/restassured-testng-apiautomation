@@ -10,7 +10,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class DepartmentTest extends BaseTest{
-    @Test(priority = 8)
+    @Test(dependsOnMethods = {"restassured.ObjectTest.deleteObjectTest"})
     public void getAllDepartmentTest() {
         System.out.println("getAllDepartmentTest starting...");
         // Get all department list request

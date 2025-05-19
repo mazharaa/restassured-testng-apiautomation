@@ -20,7 +20,7 @@ public class ObjectTest extends BaseTest{
     private final String SCREEN_SIZE = "13 inch";
     private final String COLOR = "SPace Grey";
 
-    @Test(priority = 1)
+    @Test(dependsOnMethods = {"restassured.AuthenticationTest.loginTest"})
     public void addObjectTest() {
         // Mapping the data and request body
         Map<String, Object> objectData = new HashMap<>();
@@ -79,7 +79,7 @@ public class ObjectTest extends BaseTest{
         Assert.assertEquals(color, COLOR);
     }
 
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "addObjectTest")
     public void getListAllObjectTest() {
         System.out.println("getListAllObjectTest starting...");
 
@@ -100,7 +100,7 @@ public class ObjectTest extends BaseTest{
         Assert.assertFalse(responseList.isEmpty(), "Object list should not be empty");
     }
 
-    @Test(priority = 3)
+    @Test(dependsOnMethods = "getListAllObjectTest")
     public void listOfObjectsByIdTest() {
         System.out.println("listOfObjectsByIdTest starting...");
 
@@ -124,8 +124,10 @@ public class ObjectTest extends BaseTest{
         
         Map<String, Object> data = (Map<String, Object>) firstObject.get("data");
         String year = String.valueOf(data.get("year"));
+
         // Price type data is different from addObject response body(?)
         String price = String.valueOf(data.get("price"));
+
         String cpuModel = String.valueOf(data.get("cpu_model"));
         String hardDiskSize = String.valueOf(data.get("hard_disk_size"));
 
@@ -149,7 +151,7 @@ public class ObjectTest extends BaseTest{
         Assert.assertEquals(color, COLOR);
     }
 
-    @Test(priority = 4)
+    @Test(dependsOnMethods = "listOfObjectsByIdTest")
     public void getSingleObjectTest() {
         System.out.println("getSingleObjectTest starting...");
 
@@ -169,8 +171,10 @@ public class ObjectTest extends BaseTest{
 
         Map<String, Object> data = actRes.jsonPath().getMap("data");
         String year = String.valueOf(data.get("year"));
+
         // Price type data is different from addObject response body(?)
         String price = String.valueOf(data.get("price"));
+
         String cpuModel = String.valueOf(data.get("cpu_model"));
         String hardDiskSize = String.valueOf(data.get("hard_disk_size"));
 
@@ -194,7 +198,7 @@ public class ObjectTest extends BaseTest{
         Assert.assertEquals(color, COLOR);
     }
 
-    @Test(priority = 5)
+    @Test(dependsOnMethods = "getSingleObjectTest")
     public void updateObjectTest() {
         System.out.println("updateObjectTest staring...");
 
@@ -259,7 +263,7 @@ public class ObjectTest extends BaseTest{
         Assert.assertEquals(color, COLOR);
     }
 
-    @Test(priority = 6)
+    @Test(dependsOnMethods = "updateObjectTest")
     public void partiallyUpdateObjectTest() {
         System.out.println("partiallyUpdateObjectTest staring...");
 
@@ -310,9 +314,10 @@ public class ObjectTest extends BaseTest{
         Assert.assertEquals(color, COLOR);
     }
 
-    @Test(priority = 7)
+    @Test(dependsOnMethods = "partiallyUpdateObjectTest")
     public void deleteObjectTest() {
         System.out.println("deleteObjectTest starting...");
+
         // Delete object request
         Response actRes = RestAssured
             .given()

@@ -4,20 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class AuthenticationTest extends BaseTest{
-    private final String EMAIL = "azhartest1@email.com";
-    private final String FULLNAME = "Azhar Test1 Name";
+public class AuthenticationTest extends BaseTest {
+    private final String EMAIL = "azhartest6@email.com";
+    private final String FULLNAME = "Azhar Test6 Name";
     private final String PASSWORD = "p@ssw0rd";
     private final String DEPARTMENT = "Technology";
     private final String PHONENUMBER = "081234567890";
 
-    // @Test
+    @Test(priority = 1)
     public void registerTest() {
         // Mapping the request body
         Map<String, Object> requestBody = new HashMap<>();
@@ -28,15 +27,17 @@ public class AuthenticationTest extends BaseTest{
         requestBody.put("phone_number", PHONENUMBER);
 
         System.out.println("registerTest starting...");
-        
+
         // Register request
         Response actRes = RestAssured
-            .given()
-            .contentType("application/json")
-            .body(requestBody)
-            .log().all()
-            .when()
-            .post("api/register");
+                .given()
+                .contentType("application/json")
+                .body(requestBody)
+                .log().all()
+                .when()
+                .post("api/register");
+
+        System.out.println(actRes.prettyPrint());
 
         String id = actRes.jsonPath().getString("id");
         String email = actRes.jsonPath().getString("email");
@@ -54,11 +55,9 @@ public class AuthenticationTest extends BaseTest{
         Assert.assertEquals(phoneNumber, PHONENUMBER, "Phone Number should match request");
         Assert.assertNotNull(createAt, "Create At should not be null");
         Assert.assertNotNull(updateAt, "Update At should not be null");
-
-        System.out.println(actRes.prettyPrint());
     }
 
-    @BeforeTest
+    @Test(dependsOnMethods = "registerTest")
     public void loginTest() {
         // Mapping the request body
         Map<String, Object> requestBody = new HashMap<>();
@@ -68,14 +67,15 @@ public class AuthenticationTest extends BaseTest{
         System.out.println("loginTest starting...");
 
         Response actRes = RestAssured
-            .given()
-            .contentType("application/json")
-            .body(requestBody)
-            .log().all()
-            .when()
-            .post("api/login");
-        
-        BaseTest.token = actRes.jsonPath().getString("token");;
+                .given()
+                .contentType("application/json")
+                .body(requestBody)
+                .log().all()
+                .when()
+                .post("api/login");
+
+        BaseTest.token = actRes.jsonPath().getString("token");
+        ;
 
         Assert.assertEquals(actRes.statusCode(), 200);
         Assert.assertNotNull(BaseTest.token, "Token should not be null");

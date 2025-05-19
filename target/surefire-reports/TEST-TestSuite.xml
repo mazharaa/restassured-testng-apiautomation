@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="10.451" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="8.201" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250520010321817_3.jar /Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire 2025-05-20T01-03-21_768-jvmRun1 surefire-20250520010321817_1tmp surefire_0-20250520010321817_2tmp"/>
+    <property name="sun.java.command" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250520063402720_3.jar /Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire 2025-05-20T06-34-02_673-jvmRun1 surefire-20250520063402720_1tmp surefire_0-20250520063402720_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/test-classes:/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/classes:/Users/azhar/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/azhar/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/azhar/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/azhar/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/azhar/.m2/repository/io/rest-assured/rest-assured/5.5.2/rest-assured-5.5.2.jar:/Users/azhar/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/Users/azhar/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/Users/azhar/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/azhar/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/azhar/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/azhar/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/azhar/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/azhar/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/azhar/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/azhar/.m2/repository/io/rest-assured/json-path/5.5.2/json-path-5.5.2.jar:/Users/azhar/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/Users/azhar/.m2/repository/io/rest-assured/rest-assured-common/5.5.2/rest-assured-common-5.5.2.jar:/Users/azhar/.m2/repository/io/rest-assured/xml-path/5.5.2/xml-path-5.5.2.jar:/Users/azhar/.m2/repository/org/apache/commons/commons-lang3/3.16.0/commons-lang3-3.16.0.jar:/Users/azhar/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.0/jackson-databind-2.19.0.jar:/Users/azhar/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.0/jackson-annotations-2.19.0.jar:/Users/azhar/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.0/jackson-core-2.19.0.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250520010321817_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250520063402720_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -58,7 +58,52 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="getAllDepartmentTest" classname="restassured.DepartmentTest" time="1.807">
+  <testcase name="registerTest" classname="restassured.AuthenticationTest" time="1.606">
+    <system-out><![CDATA[registerTest starting...
+Request method:	POST
+Request URI:	https://whitesmokehouse.com/webhook/api/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "p@ssw0rd",
+    "full_name": "Azhar Test6 Name",
+    "phone_number": "081234567890",
+    "department": "Technology",
+    "email": "azhartest6@email.com"
+}
+{
+    "id": "239",
+    "email": "azhartest6@email.com",
+    "full_name": "Azhar Test6 Name",
+    "department": "Technology",
+    "phone_number": "081234567890",
+    "create_at": "2025-05-19T23:34:04.365Z",
+    "update_at": "2025-05-19T23:34:04.365Z"
+}
+{
+    "id": "239",
+    "email": "azhartest6@email.com",
+    "full_name": "Azhar Test6 Name",
+    "department": "Technology",
+    "phone_number": "081234567890",
+    "create_at": "2025-05-19T23:34:04.365Z",
+    "update_at": "2025-05-19T23:34:04.365Z"
+}
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="loginTest" classname="restassured.AuthenticationTest" time="0.696">
     <system-out><![CDATA[loginTest starting...
 Request method:	POST
 Request URI:	https://whitesmokehouse.com/webhook/api/login
@@ -74,71 +119,17 @@ Multiparts:		<none>
 Body:
 {
     "password": "p@ssw0rd",
-    "email": "azhartest1@email.com"
+    "email": "azhartest6@email.com"
 }
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c"
 }
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c"
 }
-getAllDepartmentTest starting...
-Request method:	GET
-Request URI:	https://whitesmokehouse.com/webhook/api/department
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
-				Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-[
-    {
-        "id": 1,
-        "department": "Technology"
-    },
-    {
-        "id": 2,
-        "department": "Human Resource"
-    },
-    {
-        "id": 3,
-        "department": "Finance"
-    },
-    {
-        "id": 4,
-        "department": "Executive"
-    }
-]
-[
-    {
-        "id": 1,
-        "department": "Technology"
-    },
-    {
-        "id": 2,
-        "department": "Human Resource"
-    },
-    {
-        "id": 3,
-        "department": "Finance"
-    },
-    {
-        "id": 4,
-        "department": "Executive"
-    }
-]
 ]]></system-out>
-    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-]]></system-err>
   </testcase>
-  <testcase name="addObjectTest" classname="restassured.ObjectTest" time="0.65">
+  <testcase name="addObjectTest" classname="restassured.ObjectTest" time="0.747">
     <system-out><![CDATA[addObjectTest starting...
 Request method:	POST
 Request URI:	https://whitesmokehouse.com/webhook/api/objects
@@ -147,7 +138,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -167,7 +158,7 @@ Body:
 }
 [
     {
-        "id": 266,
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar",
         "data": {
             "year": "2020",
@@ -182,7 +173,7 @@ Body:
 ]
 [
     {
-        "id": 266,
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar",
         "data": {
             "year": "2020",
@@ -197,7 +188,7 @@ Body:
 ]
 ]]></system-out>
   </testcase>
-  <testcase name="getListAllObjectTest" classname="restassured.ObjectTest" time="0.85">
+  <testcase name="getListAllObjectTest" classname="restassured.ObjectTest" time="0.804">
     <system-out><![CDATA[getListAllObjectTest starting...
 Request method:	GET
 Request URI:	https://whitesmokehouse.com/webhook/api/objects
@@ -206,7 +197,7 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -1514,6 +1505,19 @@ Body:			<none>
         }
     },
     {
+        "id": 153,
+        "name": "Apple MacBook Pro 1611-albert12",
+        "data": {
+            "year": "2030",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
         "id": 142,
         "name": "Apple MacBook Pro 16",
         "data": {
@@ -1674,19 +1678,6 @@ Body:			<none>
         "name": "Apple MacBook Pro 16",
         "data": {
             "year": "2019",
-            "price": "1849.99",
-            "CPU model": "Intel Core i9",
-            "Hard disk size": "1 TB",
-            "color": "red",
-            "capacity": 2,
-            "screen_size": 14
-        }
-    },
-    {
-        "id": 153,
-        "name": "Apple MacBook Pro 1611-albert12",
-        "data": {
-            "year": "2030",
             "price": "1849.99",
             "CPU model": "Intel Core i9",
             "Hard disk size": "1 TB",
@@ -2073,6 +2064,19 @@ Body:			<none>
         }
     },
     {
+        "id": 267,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
         "id": 247,
         "name": "Macbook Red",
         "data": {
@@ -2385,7 +2389,33 @@ Body:			<none>
         }
     },
     {
-        "id": 266,
+        "id": 268,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
+        "id": 269,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar",
         "data": {
             "year": "2020",
@@ -2395,6 +2425,19 @@ Body:			<none>
             "color": "SPace Grey",
             "capacity": 8,
             "screen_size": 13
+        }
+    },
+    {
+        "id": 270,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
         }
     }
 ]
@@ -3700,6 +3743,19 @@ Body:			<none>
         }
     },
     {
+        "id": 153,
+        "name": "Apple MacBook Pro 1611-albert12",
+        "data": {
+            "year": "2030",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
         "id": 142,
         "name": "Apple MacBook Pro 16",
         "data": {
@@ -3860,19 +3916,6 @@ Body:			<none>
         "name": "Apple MacBook Pro 16",
         "data": {
             "year": "2019",
-            "price": "1849.99",
-            "CPU model": "Intel Core i9",
-            "Hard disk size": "1 TB",
-            "color": "red",
-            "capacity": 2,
-            "screen_size": 14
-        }
-    },
-    {
-        "id": 153,
-        "name": "Apple MacBook Pro 1611-albert12",
-        "data": {
-            "year": "2030",
             "price": "1849.99",
             "CPU model": "Intel Core i9",
             "Hard disk size": "1 TB",
@@ -4259,6 +4302,19 @@ Body:			<none>
         }
     },
     {
+        "id": 267,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
         "id": 247,
         "name": "Macbook Red",
         "data": {
@@ -4571,7 +4627,33 @@ Body:			<none>
         }
     },
     {
-        "id": 266,
+        "id": 268,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
+        "id": 269,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
+    },
+    {
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar",
         "data": {
             "year": "2020",
@@ -4582,20 +4664,33 @@ Body:			<none>
             "capacity": 8,
             "screen_size": 13
         }
+    },
+    {
+        "id": 270,
+        "name": "Apple MacBook Pro 16",
+        "data": {
+            "year": "2019",
+            "price": "1849.99",
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "red",
+            "capacity": 2,
+            "screen_size": 14
+        }
     }
 ]
 ]]></system-out>
   </testcase>
-  <testcase name="listOfObjectsByIdTest" classname="restassured.ObjectTest" time="2.331">
+  <testcase name="listOfObjectsByIdTest" classname="restassured.ObjectTest" time="0.613">
     <system-out><![CDATA[listOfObjectsByIdTest starting...
 Request method:	GET
-Request URI:	https://whitesmokehouse.com/webhook/api/objectslistId?id=266
+Request URI:	https://whitesmokehouse.com/webhook/api/objectslistId?id=272
 Proxy:			<none>
 Request params:	<none>
-Query params:	id=266
+Query params:	id=272
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -4603,7 +4698,7 @@ Multiparts:		<none>
 Body:			<none>
 [
     {
-        "id": 266,
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar",
         "data": {
             "year": "2020",
@@ -4618,7 +4713,7 @@ Body:			<none>
 ]
 [
     {
-        "id": 266,
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar",
         "data": {
             "year": "2020",
@@ -4633,23 +4728,23 @@ Body:			<none>
 ]
 ]]></system-out>
   </testcase>
-  <testcase name="getSingleObjectTest" classname="restassured.ObjectTest" time="0.652">
+  <testcase name="getSingleObjectTest" classname="restassured.ObjectTest" time="0.636">
     <system-out><![CDATA[getSingleObjectTest starting...
 Request method:	GET
-Request URI:	https://whitesmokehouse.com/webhook/8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/266
+Request URI:	https://whitesmokehouse.com/webhook/8749129e-f5f7-4ae6-9b03-93be7252443c/api/objects/272
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 {
-    "id": 266,
+    "id": 272,
     "name": "Apple MacBook Air M1 azhar",
     "data": {
         "year": "2020",
@@ -4662,7 +4757,7 @@ Body:			<none>
     }
 }
 {
-    "id": 266,
+    "id": 272,
     "name": "Apple MacBook Air M1 azhar",
     "data": {
         "year": "2020",
@@ -4676,16 +4771,16 @@ Body:			<none>
 }
 ]]></system-out>
   </testcase>
-  <testcase name="updateObjectTest" classname="restassured.ObjectTest" time="0.658">
+  <testcase name="updateObjectTest" classname="restassured.ObjectTest" time="0.619">
     <system-out><![CDATA[updateObjectTest staring...
 Request method:	PUT
-Request URI:	https://whitesmokehouse.com/webhook/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/266
+Request URI:	https://whitesmokehouse.com/webhook/37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/272
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -4705,7 +4800,7 @@ Body:
 }
 [
     {
-        "id": 266,
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar update",
         "data": {
             "year": "2020",
@@ -4720,7 +4815,7 @@ Body:
 ]
 [
     {
-        "id": 266,
+        "id": 272,
         "name": "Apple MacBook Air M1 azhar update",
         "data": {
             "year": "2020",
@@ -4735,16 +4830,16 @@ Body:
 ]
 ]]></system-out>
   </testcase>
-  <testcase name="partiallyUpdateObjectTest" classname="restassured.ObjectTest" time="0.731">
+  <testcase name="partiallyUpdateObjectTest" classname="restassured.ObjectTest" time="0.698">
     <system-out><![CDATA[partiallyUpdateObjectTest staring...
 Request method:	PATCH
-Request URI:	https://whitesmokehouse.com/webhook/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/266
+Request URI:	https://whitesmokehouse.com/webhook/39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/272
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -4756,7 +4851,7 @@ Body:
     "name": "Apple MacBook Air M1 azhar partially update"
 }
 {
-    "id": 266,
+    "id": 272,
     "name": "Apple MacBook Air M1 azhar partially update",
     "data": {
         "year": "2020",
@@ -4769,7 +4864,7 @@ Body:
     }
 }
 {
-    "id": 266,
+    "id": 272,
     "name": "Apple MacBook Air M1 azhar partially update",
     "data": {
         "year": "2020",
@@ -4783,16 +4878,16 @@ Body:
 }
 ]]></system-out>
   </testcase>
-  <testcase name="deleteObjectTest" classname="restassured.ObjectTest" time="0.627">
+  <testcase name="deleteObjectTest" classname="restassured.ObjectTest" time="0.797">
     <system-out><![CDATA[deleteObjectTest starting...
 Request method:	DELETE
-Request URI:	https://whitesmokehouse.com/webhook/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/266
+Request URI:	https://whitesmokehouse.com/webhook/d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/272
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY3NzgwM30.mci_mhBIjBBSjXscuAY5rhiaZ9TtpnzatbI6rz-o3pY
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
 				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -4800,12 +4895,65 @@ Multiparts:		<none>
 Body:			<none>
 {
     "status": "deleted",
-    "message": "Object with id = 266, has been deleted."
+    "message": "Object with id = 272, has been deleted."
 }
 {
     "status": "deleted",
-    "message": "Object with id = 266, has been deleted."
+    "message": "Object with id = 272, has been deleted."
 }
+]]></system-out>
+  </testcase>
+  <testcase name="getAllDepartmentTest" classname="restassured.DepartmentTest" time="0.609">
+    <system-out><![CDATA[getAllDepartmentTest starting...
+Request method:	GET
+Request URI:	https://whitesmokehouse.com/webhook/api/department
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzOSIsImlhdCI6MTc0NzY5NzY0NX0.jFIF12whN0JiOSV0PIPrd4qLuYVGsh9avnP5VfAhB8c
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+[
+    {
+        "id": 1,
+        "department": "Technology"
+    },
+    {
+        "id": 2,
+        "department": "Human Resource"
+    },
+    {
+        "id": 3,
+        "department": "Finance"
+    },
+    {
+        "id": 4,
+        "department": "Executive"
+    }
+]
+[
+    {
+        "id": 1,
+        "department": "Technology"
+    },
+    {
+        "id": 2,
+        "department": "Human Resource"
+    },
+    {
+        "id": 3,
+        "department": "Finance"
+    },
+    {
+        "id": 4,
+        "department": "Executive"
+    }
+]
 ]]></system-out>
   </testcase>
 </testsuite>
