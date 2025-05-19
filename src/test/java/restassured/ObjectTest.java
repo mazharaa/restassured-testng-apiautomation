@@ -20,7 +20,7 @@ public class ObjectTest extends BaseTest{
     private final String SCREENSIZE = "13 inch";
     private final String COLOR = "SPace Grey";
 
-    @Test
+    @Test(priority = 1)
     public void addObjectTest() {
         // Mapping the data and request body
         Map<String, Object> objectData = new HashMap<>();
@@ -35,8 +35,6 @@ public class ObjectTest extends BaseTest{
         Map<String, Object> requestBody = new HashMap<>();
         requestBody.put("name", NAME);
         requestBody.put("data", objectData);
-
-        System.out.println(token);
 
         // Add object request
         Response actRes = RestAssured
@@ -53,7 +51,7 @@ public class ObjectTest extends BaseTest{
         List<Map<String, Object>> responseList = actRes.jsonPath().getList("");
         Map<String, Object> firstObject = responseList.get(0);
 
-        int id = (int) firstObject.get("id");
+        objectId = (int) firstObject.get("id");
         String name = String.valueOf(firstObject.get("name"));
 
         
@@ -67,7 +65,7 @@ public class ObjectTest extends BaseTest{
         String color = String.valueOf(data.get("color"));
 
         Assert.assertEquals(actRes.statusCode(), 200);
-        Assert.assertNotNull(id, "ID should not be null");
+        Assert.assertNotNull(objectId, "ID should not be null");
         Assert.assertEquals(name, NAME);
         Assert.assertEquals(year, String.valueOf(YEAR));
         Assert.assertEquals(price, PRICE);
@@ -76,5 +74,28 @@ public class ObjectTest extends BaseTest{
         Assert.assertEquals(capacity, CAPACITY);
         Assert.assertEquals(screenSize, SCREENSIZE);
         Assert.assertEquals(color, COLOR);
+    }
+
+    @Test(priority = 2)
+    public void deleteObjectTest() {
+        // Delete object request
+        Response actRes = RestAssured
+            .given()
+            .contentType("application/json")
+            .header("Authorization", "Bearer " + token)
+            .log().all()
+            .when()
+            .delete("d79a30ed-1066-48b6-83f5-556120afc46f/api/objects/"+objectId);
+
+        System.out.println(actRes.prettyPrint());
+
+        String status = actRes.jsonPath().getString("status");
+        String message = actRes.jsonPath().getString("message");
+
+        Assert.assertEquals(actRes.statusCode(), 200);
+        Assert.assertNotNull(status, "status should not be null");
+        Assert.assertNotNull(message, "message should not be null");
+        Assert.assertEquals(status, "deleted");
+        Assert.assertEquals(message, "Object with id = "+objectId+", has been deleted.");
     }
 }
