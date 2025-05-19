@@ -3,12 +3,12 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="restassured.ObjectTest">
+      <class name="restassured.DepartmentTest">
         <methods>
-          <include name="partiallyUpdateObjectTest"/>
           <include name="setup"/>
+          <include name="getAllDepartmentTest"/>
         </methods>
-      </class> <!-- restassured.ObjectTest -->
+      </class> <!-- restassured.DepartmentTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

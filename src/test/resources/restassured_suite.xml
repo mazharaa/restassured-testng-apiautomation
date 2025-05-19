@@ -4,6 +4,7 @@
         <classes>
             <class name="restassured.AuthenticationTest"/>
             <class name="restassured.ObjectTest"/>
+            <class name="restassured.DepartmentTest"/>
         </classes>
     </test>
 </suite>

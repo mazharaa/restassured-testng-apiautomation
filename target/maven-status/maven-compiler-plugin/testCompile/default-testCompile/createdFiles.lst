@@ -1,3 +1,4 @@
 restassured/AuthenticationTest.class
 restassured/ObjectTest.class
 restassured/BaseTest.class
+restassured/DepartmentTest.class
