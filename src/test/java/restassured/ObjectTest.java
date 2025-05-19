@@ -36,6 +36,8 @@ public class ObjectTest extends BaseTest{
         requestBody.put("name", NAME);
         requestBody.put("data", objectData);
 
+        System.out.println("addObjectTest starting...");
+
         // Add object request
         Response actRes = RestAssured
             .given()
@@ -79,6 +81,8 @@ public class ObjectTest extends BaseTest{
 
     @Test(priority = 2)
     public void getListAllObjectTest() {
+        System.out.println("getListAllObjectTest starting...");
+
         // Get List All object request
         Response actRes = RestAssured
             .given()
@@ -98,6 +102,8 @@ public class ObjectTest extends BaseTest{
 
     @Test(priority = 3)
     public void listOfObjectsByIdTest() {
+        System.out.println("listOfObjectsByIdTest starting...");
+
         // Get List of object by ID request
         Response actRes = RestAssured
             .given()
@@ -122,10 +128,13 @@ public class ObjectTest extends BaseTest{
         String price = String.valueOf(data.get("price"));
         String cpuModel = String.valueOf(data.get("cpu_model"));
         String hardDiskSize = String.valueOf(data.get("hard_disk_size"));
+
         // Capacity type data is different from addObject response body(?)
         int capacity = (int) data.get("capacity");
+
         // Screen size type data is different from addObject response body(?)
         int screenSize = (int) data.get("screen_size");
+        
         String color = String.valueOf(data.get("color"));
 
         Assert.assertEquals(actRes.statusCode(), 200);
@@ -142,7 +151,9 @@ public class ObjectTest extends BaseTest{
 
     @Test(priority = 4)
     public void getSingleObjectTest() {
-        // Get List of object by ID request
+        System.out.println("getSingleObjectTest starting...");
+
+        // Get single object request
         Response actRes = RestAssured
             .given()
             .contentType("application/json")
@@ -162,10 +173,13 @@ public class ObjectTest extends BaseTest{
         String price = String.valueOf(data.get("price"));
         String cpuModel = String.valueOf(data.get("cpu_model"));
         String hardDiskSize = String.valueOf(data.get("hard_disk_size"));
+
         // Capacity type data is different from addObject response body(?)
         int capacity = (int) data.get("capacity");
+
         // Screen size type data is different from addObject response body(?)
         int screenSize = (int) data.get("screen_size");
+
         String color = String.valueOf(data.get("color"));
 
         Assert.assertEquals(actRes.statusCode(), 200);
@@ -181,7 +195,73 @@ public class ObjectTest extends BaseTest{
     }
 
     @Test(priority = 5)
+    public void updateObjectTest() {
+        System.out.println("updateObjectTest staring...");
+
+        // Update name
+        String updateName = "Apple MacBook Air M1 azhar update";
+
+        // Mapping the data and request body
+        Map<String, Object> objectData = new HashMap<>();
+        objectData.put("year", YEAR);
+        objectData.put("price", PRICE);
+        objectData.put("cpu_model", CPU_MODEL);
+        objectData.put("hard_disk_size", HARD_DISK_SIZE);
+        objectData.put("capacity", CAPACITY);
+        objectData.put("screen_size", SCREEN_SIZE);
+        objectData.put("color", COLOR);
+
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("name", updateName);
+        requestBody.put("data", objectData);
+
+        // Get List of object by ID request
+        Response actRes = RestAssured
+            .given()
+            .contentType("application/json")
+            .header("Authorization", "Bearer " + token)
+            .body(requestBody)
+            .log().all()
+            .when()
+            .put("37777abe-a5ef-4570-a383-c99b5f5f7906/api/objects/" + objectId);
+
+        System.out.println(actRes.prettyPrint());
+
+        List<Map<String, Object>> responseList = actRes.jsonPath().getList("");
+        Map<String, Object> firstObject = responseList.get(0);
+
+        int id = (int) firstObject.get("id");
+        String name = String.valueOf(firstObject.get("name"));
+        
+        Map<String, Object> data = (Map<String, Object>) firstObject.get("data");
+        String year = String.valueOf(data.get("year"));
+        int price = (int) data.get("price");
+
+        // Key is different from CPU model key in addObject response body
+        String cpuModel = String.valueOf(data.get("CPU model"));
+
+        // Key is different from Hard disk size key in addObject response body
+        String hardDiskSize = String.valueOf(data.get("Hard disk size"));
+
+        String capacity = String.valueOf(data.get("capacity"));
+        String screenSize = String.valueOf(data.get("screen_size"));
+        String color = String.valueOf(data.get("color"));
+
+        Assert.assertEquals(actRes.statusCode(), 200);
+        Assert.assertNotNull(id, "ID should not be null");
+        Assert.assertEquals(name, updateName);
+        Assert.assertEquals(year, String.valueOf(YEAR));
+        Assert.assertEquals(price, PRICE);
+        Assert.assertEquals(cpuModel, CPU_MODEL);
+        Assert.assertEquals(hardDiskSize, HARD_DISK_SIZE);
+        Assert.assertEquals(capacity, CAPACITY);
+        Assert.assertEquals(screenSize, SCREEN_SIZE);
+        Assert.assertEquals(color, COLOR);
+    }
+
+    @Test(priority = 6)
     public void deleteObjectTest() {
+        System.out.println("deleteObjectTest starting...");
         // Delete object request
         Response actRes = RestAssured
             .given()

@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-20T00:00:44 WIB" name="Surefire suite" finished-at="2025-05-20T00:00:49 WIB" duration-ms="4856">
+  <suite started-at="2025-05-20T00:24:35 WIB" name="Surefire suite" finished-at="2025-05-20T00:24:41 WIB" duration-ms="5971">
     <groups>
     </groups>
-    <test started-at="2025-05-20T00:00:44 WIB" name="Surefire test" finished-at="2025-05-20T00:00:49 WIB" duration-ms="4856">
+    <test started-at="2025-05-20T00:24:35 WIB" name="Surefire test" finished-at="2025-05-20T00:24:41 WIB" duration-ms="5971">
       <class name="restassured.AuthenticationTest">
-        <test-method is-config="true" signature="loginTest()[pri:0, instance:restassured.AuthenticationTest@2890c451]" started-at="2025-05-20T00:00:44 WIB" name="loginTest" finished-at="2025-05-20T00:00:46 WIB" duration-ms="1570" status="PASS">
+        <test-method is-config="true" signature="loginTest()[pri:0, instance:restassured.AuthenticationTest@40e6dfe1]" started-at="2025-05-20T00:24:35 WIB" name="loginTest" finished-at="2025-05-20T00:24:36 WIB" duration-ms="1480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
       </class> <!-- restassured.AuthenticationTest -->
       <class name="restassured.ObjectTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:restassured.ObjectTest@35083305]" started-at="2025-05-20T00:00:44 WIB" name="setup" finished-at="2025-05-20T00:00:44 WIB" duration-ms="153" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:34 WIB" name="setup" finished-at="2025-05-20T00:24:35 WIB" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addObjectTest()[pri:1, instance:restassured.ObjectTest@35083305]" started-at="2025-05-20T00:00:46 WIB" name="addObjectTest" finished-at="2025-05-20T00:00:47 WIB" duration-ms="647" status="PASS">
+        <test-method signature="addObjectTest()[pri:1, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:36 WIB" name="addObjectTest" finished-at="2025-05-20T00:24:37 WIB" duration-ms="922" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addObjectTest -->
-        <test-method signature="getListAllObjectTest()[pri:2, instance:restassured.ObjectTest@35083305]" started-at="2025-05-20T00:00:47 WIB" name="getListAllObjectTest" finished-at="2025-05-20T00:00:47 WIB" duration-ms="776" status="PASS">
+        <test-method signature="getListAllObjectTest()[pri:2, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:37 WIB" name="getListAllObjectTest" finished-at="2025-05-20T00:24:38 WIB" duration-ms="872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getListAllObjectTest -->
-        <test-method signature="listOfObjectsByIdTest()[pri:3, instance:restassured.ObjectTest@35083305]" started-at="2025-05-20T00:00:47 WIB" name="listOfObjectsByIdTest" finished-at="2025-05-20T00:00:48 WIB" duration-ms="628" status="PASS">
+        <test-method signature="listOfObjectsByIdTest()[pri:3, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:38 WIB" name="listOfObjectsByIdTest" finished-at="2025-05-20T00:24:39 WIB" duration-ms="725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- listOfObjectsByIdTest -->
-        <test-method signature="getSingleObjectTest()[pri:4, instance:restassured.ObjectTest@35083305]" started-at="2025-05-20T00:00:48 WIB" name="getSingleObjectTest" finished-at="2025-05-20T00:00:49 WIB" duration-ms="723" status="PASS">
+        <test-method signature="getSingleObjectTest()[pri:4, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:39 WIB" name="getSingleObjectTest" finished-at="2025-05-20T00:24:39 WIB" duration-ms="659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSingleObjectTest -->
-        <test-method signature="deleteObjectTest()[pri:5, instance:restassured.ObjectTest@35083305]" started-at="2025-05-20T00:00:49 WIB" name="deleteObjectTest" finished-at="2025-05-20T00:00:49 WIB" duration-ms="499" status="PASS">
+        <test-method signature="updateObjectTest()[pri:5, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:39 WIB" name="updateObjectTest" finished-at="2025-05-20T00:24:40 WIB" duration-ms="652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateObjectTest -->
+        <test-method signature="deleteObjectTest()[pri:6, instance:restassured.ObjectTest@8e0379d]" started-at="2025-05-20T00:24:40 WIB" name="deleteObjectTest" finished-at="2025-05-20T00:24:41 WIB" duration-ms="646" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteObjectTest -->
