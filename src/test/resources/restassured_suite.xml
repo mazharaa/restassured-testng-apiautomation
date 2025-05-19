@@ -3,6 +3,7 @@
     <test name="API Tests">
         <classes>
             <class name="restassured.AuthenticationTest"/>
+            <class name="restassured.ObjectTest"/>
         </classes>
     </test>
 </suite>

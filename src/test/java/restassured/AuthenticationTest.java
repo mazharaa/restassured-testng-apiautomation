@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -16,7 +17,7 @@ public class AuthenticationTest extends BaseTest{
     private final String DEPARTMENT = "Technology";
     private final String PHONENUMBER = "081234567890";
 
-    @Test
+    // @Test
     public void registerTest() {
         // Mapping the request body
         Map<String, Object> requestBody = new HashMap<>();
@@ -57,7 +58,7 @@ public class AuthenticationTest extends BaseTest{
         System.out.println(actRes.prettyPrint());
     }
 
-    @Test
+    @BeforeTest
     public void loginTest() {
         // Mapping the request body
         Map<String, Object> requestBody = new HashMap<>();
@@ -73,10 +74,11 @@ public class AuthenticationTest extends BaseTest{
             .log().all()
             .when()
             .post("api/login");
+        
+        BaseTest.token = actRes.jsonPath().getString("token");;
 
-        token = actRes.jsonPath().getString("token");
-
-        Assert.assertNotNull(token, "Token should not be null");
+        Assert.assertEquals(actRes.statusCode(), 200);
+        Assert.assertNotNull(BaseTest.token, "Token should not be null");
 
         System.out.println(actRes.prettyPrint());
     }

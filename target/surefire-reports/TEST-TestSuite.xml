@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="2.203" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="2.78" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250518225242878_3.jar /Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire 2025-05-18T22-52-42_822-jvmRun1 surefire-20250518225242878_1tmp surefire_0-20250518225242878_2tmp"/>
+    <property name="sun.java.command" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250519212757817_3.jar /Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire 2025-05-19T21-27-57_762-jvmRun1 surefire-20250519212757817_1tmp surefire_0-20250519212757817_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/test-classes:/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/classes:/Users/azhar/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/azhar/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/azhar/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/azhar/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/azhar/.m2/repository/io/rest-assured/rest-assured/5.5.2/rest-assured-5.5.2.jar:/Users/azhar/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/Users/azhar/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/Users/azhar/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/azhar/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/azhar/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/azhar/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/azhar/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/azhar/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/azhar/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/azhar/.m2/repository/io/rest-assured/json-path/5.5.2/json-path-5.5.2.jar:/Users/azhar/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/Users/azhar/.m2/repository/io/rest-assured/rest-assured-common/5.5.2/rest-assured-common-5.5.2.jar:/Users/azhar/.m2/repository/io/rest-assured/xml-path/5.5.2/xml-path-5.5.2.jar:/Users/azhar/.m2/repository/org/apache/commons/commons-lang3/3.16.0/commons-lang3-3.16.0.jar:/Users/azhar/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.0/jackson-databind-2.19.0.jar:/Users/azhar/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.0/jackson-annotations-2.19.0.jar:/Users/azhar/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.0/jackson-core-2.19.0.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250518225242878_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/software_engineer/personal_project/sdet/bootcamp_selenium/task/task1/restassured_testng_apiautomation/target/surefire/surefirebooter-20250519212757817_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -58,7 +58,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="loginTest" classname="restassured.AuthenticationTest" time="1.651">
+  <testcase name="addObjectTest" classname="restassured.ObjectTest" time="0.692">
     <system-out><![CDATA[loginTest starting...
 Request method:	POST
 Request URI:	https://whitesmokehouse.com/webhook/api/login
@@ -77,11 +77,67 @@ Body:
     "email": "azhartest1@email.com"
 }
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzU4MzU2NH0.SZkCdyv-_s8RWBGPevfrsNRy-MmNMfV-zOvtADQw_KI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY2NDg3OX0._N0BczRGTr2uOb9yjz4wq_qdwuYXicVHrnCcO47wPoE"
 }
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzU4MzU2NH0.SZkCdyv-_s8RWBGPevfrsNRy-MmNMfV-zOvtADQw_KI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY2NDg3OX0._N0BczRGTr2uOb9yjz4wq_qdwuYXicVHrnCcO47wPoE"
 }
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY2NDg3OX0._N0BczRGTr2uOb9yjz4wq_qdwuYXicVHrnCcO47wPoE
+Request method:	POST
+Request URI:	https://whitesmokehouse.com/webhook/api/objects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExNyIsImlhdCI6MTc0NzY2NDg3OX0._N0BczRGTr2uOb9yjz4wq_qdwuYXicVHrnCcO47wPoE
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "data": {
+        "hard_disk_size": "256 GB",
+        "color": "SPace Grey",
+        "year": 2020,
+        "price": 1199,
+        "cpu_model": "Apple M1",
+        "screen_size": "13 inch",
+        "capacity": "8 CPU"
+    },
+    "name": "Apple MacBook Air M1 azhar"
+}
+[
+    {
+        "id": 191,
+        "name": "Apple MacBook Air M1 azhar",
+        "data": {
+            "year": "2020",
+            "price": 1199,
+            "cpu_model": "Apple M1",
+            "hard_disk_size": "256 GB",
+            "color": "SPace Grey",
+            "capacity": "8 CPU",
+            "screen_size": "13 inch"
+        }
+    }
+]
+[
+    {
+        "id": 191,
+        "name": "Apple MacBook Air M1 azhar",
+        "data": {
+            "year": "2020",
+            "price": 1199,
+            "cpu_model": "Apple M1",
+            "hard_disk_size": "256 GB",
+            "color": "SPace Grey",
+            "capacity": "8 CPU",
+            "screen_size": "13 inch"
+        }
+    }
+]
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
