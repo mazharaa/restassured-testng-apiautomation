@@ -77,6 +77,25 @@ public class ObjectTest extends BaseTest{
     }
 
     @Test(priority = 2)
+    public void getListAllObjectTest() {
+        // Get List All object request
+        Response actRes = RestAssured
+            .given()
+            .contentType("application/json")
+            .header("Authorization", "Bearer " + token)
+            .log().all()
+            .when()
+            .get("api/objects");
+
+        List<Map<String, Object>> responseList = actRes.jsonPath().getList("");
+
+        System.out.println(actRes.prettyPrint());
+
+        Assert.assertEquals(actRes.statusCode(), 200);
+        Assert.assertFalse(responseList.isEmpty(), "Object list should not be empty");
+    }
+
+    @Test(priority = 3)
     public void deleteObjectTest() {
         // Delete object request
         Response actRes = RestAssured
