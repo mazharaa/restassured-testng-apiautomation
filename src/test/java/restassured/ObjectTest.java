@@ -134,7 +134,7 @@ public class ObjectTest extends BaseTest{
 
         // Screen size type data is different from addObject response body(?)
         int screenSize = (int) data.get("screen_size");
-        
+
         String color = String.valueOf(data.get("color"));
 
         Assert.assertEquals(actRes.statusCode(), 200);
@@ -260,6 +260,57 @@ public class ObjectTest extends BaseTest{
     }
 
     @Test(priority = 6)
+    public void partiallyUpdateObjectTest() {
+        System.out.println("partiallyUpdateObjectTest staring...");
+
+        // Update name, price, and CPU Model
+        String updateName = "Apple MacBook Air M1 azhar partially update";
+        int updatePrice = 999;
+        String updateCpuModel = "Apple M1 partially update";
+
+        // Mapping the request body data
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("name", updateName);
+        requestBody.put("price", updatePrice);
+        requestBody.put("cpu_model", updateCpuModel);
+
+        // Get List of object by ID request
+        Response actRes = RestAssured
+            .given()
+            .contentType("application/json")
+            .header("Authorization", "Bearer " + token)
+            .body(requestBody)
+            .log().all()
+            .when()
+            .patch("39a0f904-b0f2-4428-80a3-391cea5d7d04/api/object/" + objectId);
+
+        System.out.println(actRes.prettyPrint());
+
+        int id = (int) actRes.jsonPath().getInt("id");
+        String name = actRes.jsonPath().getString("name");
+        
+        Map<String, Object> data = actRes.jsonPath().getMap("data");
+        String year = String.valueOf(data.get("year"));
+        String price = String.valueOf(data.get("price"));
+        String cpuModel = String.valueOf(data.get("cpu_model"));
+        String hardDiskSize = String.valueOf(data.get("hard_disk_size"));
+        String capacity = String.valueOf(data.get("capacity"));
+        String screenSize = String.valueOf(data.get("screen_size"));
+        String color = String.valueOf(data.get("color"));
+
+        Assert.assertEquals(actRes.statusCode(), 200);
+        Assert.assertNotNull(id, "ID should not be null");
+        Assert.assertEquals(name, updateName);
+        Assert.assertEquals(year, String.valueOf(YEAR));
+        Assert.assertEquals(price, String.valueOf(updatePrice));
+        Assert.assertEquals(cpuModel, updateCpuModel);
+        Assert.assertEquals(hardDiskSize, HARD_DISK_SIZE);
+        Assert.assertEquals(capacity, CAPACITY);
+        Assert.assertEquals(screenSize, SCREEN_SIZE);
+        Assert.assertEquals(color, COLOR);
+    }
+
+    @Test(priority = 7)
     public void deleteObjectTest() {
         System.out.println("deleteObjectTest starting...");
         // Delete object request

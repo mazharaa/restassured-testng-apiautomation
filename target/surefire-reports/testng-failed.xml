@@ -5,7 +5,7 @@
     <classes>
       <class name="restassured.ObjectTest">
         <methods>
-          <include name="updateObjectTest"/>
+          <include name="partiallyUpdateObjectTest"/>
           <include name="setup"/>
         </methods>
       </class> <!-- restassured.ObjectTest -->
