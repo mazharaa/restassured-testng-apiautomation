@@ -96,4 +96,36 @@ public class RegisterEmployeeTest {
         assert employeeLoginResponses.size() > 0 : "Data is empty";
         assert StaticVar.token != null : "Token is null";
     }
+
+    @Test(dependsOnMethods = "loginEmployee", groups = "RegisterEmployee")
+    public void getEmployee() throws Exception {
+        System.out.println("getEmployee test starting...");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        Response res = RestAssured
+            .given()
+            .contentType("application/json")
+            .header("Authorization", "Bearer " + StaticVar.token)
+            .log().all()
+            .when()
+            .get("employee/get");
+
+        System.out.println(res.asPrettyString());
+
+        assert res.getStatusCode() == 200 : "Get employee status code should be 200";
+
+        res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("add_employee_schema.json"));
+
+        List<AddEmployeeResponse> getEmployeeResponses = objectMapper.readValue(res.body().asString(),
+        new TypeReference<List<AddEmployeeResponse>>() { 
+        });
+
+        assert getEmployeeResponses.size() > 0 : "Data is Empty";
+        assert getEmployeeResponses.get(0).getEmail().equals(StaticVar.employee.getEmail()) : "email not expected";
+        assert getEmployeeResponses.get(0).getFullName().equals(StaticVar.employee.getFullName()) : "Full name not expected";
+        assert getEmployeeResponses.get(0).getDepartment().equals(StaticVar.employee.getDepartment()) : "Department not expected";
+        assert getEmployeeResponses.get(0).getTitle().equals(StaticVar.employee.getTitle()) : "Title not expected";
+        assert getEmployeeResponses.get(0).getPasswordHash() != null : "password hash is null";
+    }
 }
