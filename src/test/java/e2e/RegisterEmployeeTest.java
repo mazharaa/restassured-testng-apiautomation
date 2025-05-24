@@ -75,7 +75,7 @@ public class RegisterEmployeeTest {
 
         Response res = RestAssured
             .given()
-            .contentType("aplication/json")
+            .contentType("application/json")
             .body(body)
             .log().all()
             .when()
@@ -92,6 +92,8 @@ public class RegisterEmployeeTest {
         });
 
         StaticVar.token = employeeLoginResponses.get(0).getToken();
+
+        assert employeeLoginResponses.size() > 0 : "Data is empty";
         assert StaticVar.token != null : "Token is null";
     }
 }
