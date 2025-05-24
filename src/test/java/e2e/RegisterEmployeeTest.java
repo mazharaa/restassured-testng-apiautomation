@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import com.demo.restassured_testng.api_automation.model.EmployeeModel;
 import com.demo.restassured_testng.api_automation.model.response_model.AddEmployeeResponse;
 import com.demo.restassured_testng.api_automation.model.response_model.EmployeeLoginResponse;
+import com.demo.restassured_testng.api_automation.model.response_model.GetAllEmployeeResponse;
+import com.demo.restassured_testng.api_automation.model.response_model.GetEmployeeResponse;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -115,10 +117,10 @@ public class RegisterEmployeeTest {
 
         assert res.getStatusCode() == 200 : "Get employee status code should be 200";
 
-        res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("add_employee_schema.json"));
+        res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("get_employee_schema.json"));
 
-        List<AddEmployeeResponse> getEmployeeResponses = objectMapper.readValue(res.body().asString(),
-        new TypeReference<List<AddEmployeeResponse>>() { 
+        List<GetEmployeeResponse> getEmployeeResponses = objectMapper.readValue(res.body().asString(),
+        new TypeReference<List<GetEmployeeResponse>>() { 
         });
 
         assert getEmployeeResponses.size() > 0 : "Data is Empty";
@@ -127,5 +129,35 @@ public class RegisterEmployeeTest {
         assert getEmployeeResponses.get(0).getDepartment().equals(StaticVar.employee.getDepartment()) : "Department not expected";
         assert getEmployeeResponses.get(0).getTitle().equals(StaticVar.employee.getTitle()) : "Title not expected";
         assert getEmployeeResponses.get(0).getPasswordHash() != null : "password hash is null";
+    }
+
+    @Test(groups = "RegisterEmployee")
+    public void getAllEmployee() throws Exception {
+        System.out.println("getAllEmployee test starting...");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        Response res = RestAssured
+            .given()
+            .contentType("application/json")
+            .log().all()
+            .when()
+            .get("employee/get_all");
+
+        System.out.println(res.asPrettyString());
+
+        assert res.getStatusCode() == 200 : "Get all employee status code should be 200";
+
+        res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("get_all_employee_schema.json"));
+
+        List<GetAllEmployeeResponse> getAllEmployeeResponses = objectMapper.readValue(res.body().asString(),
+        new TypeReference<List<GetAllEmployeeResponse>>() { 
+        });
+
+        assert getAllEmployeeResponses.size() > 0 : "Data is Empty";
+        
+        for (GetAllEmployeeResponse getAllEmployeeResponse : getAllEmployeeResponses) {
+            assert getAllEmployeeResponse.getFullName() != null : "Full name shoul not be null";
+        }
     }
 }
