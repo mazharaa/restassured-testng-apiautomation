@@ -13,7 +13,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class DeleteEmployeeTest {
-    @Test(dependsOnGroups = "RegisterEmployee")
+    @Test(dependsOnGroups = "UpdateEmployee")
     public void deleteEmployee() throws Exception{
         System.out.println("deleteEmployee test starting...");
 
