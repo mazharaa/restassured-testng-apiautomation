@@ -19,7 +19,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class UpdateEmployee {
-    @BeforeClass
+    @BeforeClass(dependsOnGroups = "RegisterEmployee")
     public void testDataSetUp() {
         System.out.println("Setting up test data UpdateEmployee group...");
 
@@ -42,7 +42,7 @@ public class UpdateEmployee {
 
         Response res = RestAssured
             .given()
-            .contentType("applicateion/json")
+            .contentType("application/json")
             .header("Authorization", "Bearer " + StaticVar.token)
             .body(body)
             .log().all()
@@ -98,7 +98,7 @@ public class UpdateEmployee {
         assert getEmployeeResponses.get(0).getPasswordHash() != null : "password hash is null";
     }
 
-    @Test(groups = "UpdateEmployee")
+    @Test(dependsOnMethods = "getEmployee", groups = "UpdateEmployee")
     public void getAllEmployee() throws Exception {
         System.out.println("getAllEmployee test starting...");
 
@@ -128,7 +128,7 @@ public class UpdateEmployee {
         }
     }
 
-    @Test(groups = "UpdateEmployee")
+    @Test(dependsOnMethods = "getEmployee", groups = "UpdateEmployee")
     public void searchEmployee() throws Exception{
         System.out.println("searchEmployee test starting...");
 

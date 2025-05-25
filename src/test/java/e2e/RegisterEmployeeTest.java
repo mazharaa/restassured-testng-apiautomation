@@ -138,7 +138,7 @@ public class RegisterEmployeeTest {
         assert getEmployeeResponses.get(0).getPasswordHash() != null : "password hash is null";
     }
 
-    @Test(groups = "RegisterEmployee")
+    @Test(dependsOnMethods = "getEmployee", groups = "RegisterEmployee")
     public void getAllEmployee() throws Exception {
         System.out.println("getAllEmployee test starting...");
 
@@ -168,7 +168,7 @@ public class RegisterEmployeeTest {
         }
     }
 
-    @Test(groups = "RegisterEmployee")
+    @Test(dependsOnMethods = "getAllEmployee", groups = "RegisterEmployee")
     public void searchEmployee() throws Exception{
         System.out.println("searchEmployee test starting...");
 
