@@ -3,6 +3,7 @@ package e2e;
 import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -25,6 +26,11 @@ public class RegisterEmployeeTest {
         System.out.println("Suite E2E running...");
 
         RestAssured.baseURI = StaticVar.BASE_URL;
+    }
+
+    @BeforeClass
+    public void testDataSetUp() {
+        System.out.println("Setting up test data RegisterEmployee group...");
 
         String randomString = RandomStringUtils.randomAlphabetic(10);
 
