@@ -86,7 +86,6 @@ public class DeleteEmployeeTest {
         Response res = RestAssured
             .given()
             .contentType("application/json")
-            .header("Authorization", "Bearer " + StaticVar.token)
             .log().all()
             .when()
             .get("41a9698d-d8b0-42df-9ddc-89c0a1a1aa79/employee/search/" + query);
