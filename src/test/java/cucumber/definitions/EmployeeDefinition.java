@@ -49,24 +49,24 @@ public class EmployeeDefinition {
     }
 
     @And("The response's {string} should not be null")
-    public void reponse_null_validation(String property) {
+    public void assert_reponse_null(String property) {
         assert response.jsonPath().getString("[0]." + property) != null : property + " is null";
     }
 
     @And("The response's {string} should be {string}")
-    public void response_value_property_validation(String property, String value) {
+    public void assert_response_value(String property, String value) {
         assert response.jsonPath().getString("[0]." + property).equals(value) : property +" is not mathc with " + value;
     }
 
     // Only for test data is ready to test
     @And("The response should not be empty")
-    public void response_empty_validation() {
+    public void assert_response_empty() {
         assert response.jsonPath().getList("$").size() > 0 : "Response is empty" ;
     }
 
     // Only for test data is ready to test
     @And("Full name should not be null")
-    public void full_name_get_all_validation() {
+    public void assert_get_all_full_name() {
         int employeeTotal = response.jsonPath().getList("$").size();
 
         for (int i = 0; i < employeeTotal; i++) {
@@ -76,7 +76,7 @@ public class EmployeeDefinition {
 
     // Only for test data is ready to test
     @And("Search result should not be empty and contain {string}")
-    public void search_result_validation(String query) {
+    public void assert_search_result(String query) {
         int resultsTotal = response.jsonPath().getList("result").size();
 
         for (int i = 0; i < resultsTotal; i++) {
@@ -87,10 +87,5 @@ public class EmployeeDefinition {
             String arrString[] = response.jsonPath().getString("[0].result[" + i + "].full_name").split(" ", 2);
             assert arrString[0].equals(query) : "Full name is not match with query";
         }
-    }
-
-    @And("Search results contain {string}")
-    public void searc_resul_contain_validation(String query) {
-
     }
 }
