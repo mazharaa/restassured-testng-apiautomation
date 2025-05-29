@@ -206,6 +206,8 @@ public class RegisterEmployeeTest {
             assert searchResult.getFullName() != null : "Full name should not be null";
             assert searchResult.getDepartment() != null : "Department should not be null";
             assert searchResult.getTitle() != null : "Title should not be null";
+
+            assert searchResult.getFullName().split(" ", 2)[0].equals(query) : "Full name is not match with query";
         }
     }
 }
