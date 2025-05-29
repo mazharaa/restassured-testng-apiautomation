@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.demo.restassured_testng.api_automation.model.EmployeeModel;
+import com.demo.restassured_testng.api_automation.model.EmployeeSearchInfo;
 import com.demo.restassured_testng.api_automation.model.response_model.AddEmployeeResponse;
 import com.demo.restassured_testng.api_automation.model.response_model.EmployeeLoginResponse;
 import com.demo.restassured_testng.api_automation.model.response_model.GetAllEmployeeResponse;
@@ -198,5 +199,13 @@ public class RegisterEmployeeTest {
         assert searchEmployeeResponses.size() > 0 : "Data is Empty";
         assert searchEmployeeResponses.get(0).getQuery().equals(query) : "query not expected";
         assert searchEmployeeResponses.get(0).getResult().size() > 0 : "Search not found";
+
+        List<EmployeeSearchInfo> searchResults = searchEmployeeResponses.get(0).getResult();
+
+        for (EmployeeSearchInfo searchResult : searchResults) {
+            assert searchResult.getFullName() != null : "Full name should not be null";
+            assert searchResult.getDepartment() != null : "Department should not be null";
+            assert searchResult.getTitle() != null : "Title should not be null";
+        }
     }
 }

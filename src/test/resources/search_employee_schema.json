@@ -10,7 +10,22 @@
         "type": "string"
       },
       "result": {
-        "type": "array"
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "full_name": {
+              "type": "string"
+            },
+            "department": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": ["full_name", "department", "title"]
+        }
       }
     },
     "required": ["query", "result"]
